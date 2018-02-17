@@ -3,10 +3,15 @@ SPOOL  output.txt REPLACE
 DROP TABLE customer CASCADE CONSTRAINTS;
 DROP TABLE warehouse supplier CASCADE CONSTRAINTS;
 DROP TABLE movie CASCADE CONSTRAINTS;
+DROP TABLE genre CASCADE CONSTRAINTS;
 DROP TABLE fee CASCADE CONSTRAINTS;
 DROP TABLE order CASCADE CONSTRAINTS;
 DROP TABLE cast CASCADE CONSTRAINTS;
 DROP TABLE awards CASCADE CONSTRAINTS;
+DROP TABLE price CASCADE CONSTRAINTS;
+DROP TABLE cast CASCADE CONSTRAINTS;
+DROP TABLE serial number CASCADE CONSTRAINTS;
+
 
 
 
@@ -255,27 +260,13 @@ INSERT INTO movies (movie_id, title, category, description, released_on) VALUES 
 INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53202', 'Christmas Vacation', 'adventure', 'A family decides to travel for Christmas and things go hilariously wrong', '04-FEB-1985');
 INSERT INTO movies (movie_id, title, category, description, released_on) VALUES ('53235', 'A Christmas Story', 'drama', 'All a boy wants for Christmas is a Red Ryder BB gun', '04-SEP-1941');
 
-
-INSERT INTO movie_awards (movie_award_id, award_to_date) VALUES ('45457', '2');
-INSERT INTO movie_awards (movie_award_id, award_to_date) VALUES ('45212', '7');
-INSERT INTO movie_awards (movie_award_id, award_to_date) VALUES ('45452', '1');
-INSERT INTO movie_awards (movie_award_id, award_to_date) VALUES ('45555', '3');
-INSERT INTO movie_awards (movie_award_id, award_to_date) VALUES ('45207', '2');
-
 INSERT INTO awards (award_id, award, award_description) VALUES ('213', 'Outstanding Actor', 'Awarded to the best overall actor.');
 INSERT INTO awards (award_id, award, award_description) VALUES ('252', 'Best Supporting Actor', 'Awarded to the best supporting actor.');
 INSERT INTO awards (award_id, award, award_description) VALUES ('897', 'Cinemetography', 'Awarded to the best cinemetography.');
 INSERT INTO awards (award_id, award, award_description) VALUES ('242', 'Best Lead', 'Awarded to the best lead.');
 INSERT INTO awards (award_id, award, award_description) VALUES ('545', 'Best Screenplay', 'Awarded to the best original screenplay.');
 
-
-INSERT INTO movie_actors (movie_actor_id, role) VALUES ('45641', 'Lead');
-INSERT INTO movie_actors (movie_actor_id, role) VALUES ('54999', 'Extra');
-INSERT INTO movie_actors (movie_actor_id, role) VALUES ('54653', 'Lead');
-INSERT INTO movie_actors (movie_actor_id, role) VALUES ('58784', 'Supporting actor');
-INSERT INTO movie_actors (movie_actor_id, role) VALUES ('54654', 'Special guest');
-
-INSERT INTO actors (actor_id, name, gender, contact) VALUES ('54642', 'Brad Pitt', 'M', '8772365858');
+INSERT INTO cast (actor_id, name, gender, contact) VALUES ('54642', 'Brad Pitt', 'M', '8772365858');
 INSERT INTO actors (actor_id, name, gender, contact) VALUES ('25320', 'Billy bob Thornton', 'M', '6953265885');
 INSERT INTO actors (actor_id, name, gender, contact) VALUES ('12487', 'Angelina Jolie', 'F', '8547852012');
 INSERT INTO actors (actor_id, name, gender, contact) VALUES ('65895', 'Jennier Aniston', 'F', '2021548569');
@@ -287,17 +278,7 @@ INSERT INTO companies (company_id, name, description) VALUES ('520', 'Hollywood 
 INSERT INTO companies (company_id, name, description) VALUES ('514', 'Big Motion Pictures', 'Responsible for some of the biggest films of the 20th century.');
 INSERT INTO companies (company_id, name, description) VALUES ('560', 'Socal Productions', 'Low budget film makers');
 
-INSERT INTO movie_producers (movie_producer_id) VALUES ('84845');
-INSERT INTO movie_producers (movie_producer_id) VALUES ('85411');
-INSERT INTO movie_producers (movie_producer_id) VALUES ('12133');
-INSERT INTO movie_producers (movie_producer_id) VALUES ('33555');
-INSERT INTO movie_producers (movie_producer_id) VALUES ('86897');
 
-INSERT INTO producers (producer_id, name) VALUES ('02555', 'Big Motion Pictures');
-INSERT INTO producers (producer_id, name) VALUES ('02185', 'Hollywood Films');
-INSERT INTO producers (producer_id, name) VALUES ('12474', 'Worldwide Productions');
-INSERT INTO producers (producer_id, name) VALUES ('36988', 'Film Mountain');
-INSERT INTO producers (producer_id, name) VALUES ('69655', 'SoCal Productions');
 
 INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('985', 'The Video Store', 'Orlando, FL', '4484434841');
 INSERT INTO movie_distributors (distributor_id, company_name, location, contact) VALUES ('415', 'Video Rental World', 'Orlando, FL', '4484430236');
